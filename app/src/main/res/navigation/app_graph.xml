@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_graph"
+    app:startDestination="@id/main_fragment">
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.atriz.draganddropapplication.main.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/to_item_in_list_fragment"
+            app:destination="@id/item_in_list_fragment" />
+        <action
+            android:id="@+id/to_item_in_list_to_list_fragment"
+            app:destination="@id/item_in_list_to_list_fragment" />
+        <action
+            android:id="@+id/to_item_in_list_to_view_fragment"
+            app:destination="@id/item_in_list_to_view_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/item_in_list_to_list_fragment"
+        android:name="com.atriz.draganddropapplication.feature.item_in_list_to_list.ItemInListToListFragment"
+        android:label="ItemInListToListFragment"
+        tools:layout="@layout/fragment_item_in_list_to_list" />
+
+    <fragment
+        android:id="@+id/item_in_list_fragment"
+        android:name="com.atriz.draganddropapplication.feature.item_in_list.ItemInListFragment"
+        android:label="ItemInListFragment"
+        tools:layout="@layout/fragment_item_in_list"/>
+    <fragment
+        android:id="@+id/item_in_list_to_view_fragment"
+        android:name="com.atriz.draganddropapplication.feature.item_in_list_to_view.ItemInListToViewFragment"
+        android:label="fragment_item_in_list_to_view"
+        tools:layout="@layout/fragment_item_in_list_to_view" />
+</navigation>
